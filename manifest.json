@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Spaffnerds Better Setlist Notes Plugin",
+    "description": "This extension fixes repetitive setlist notes on Spaffnerds.com.",
+    "version": "2.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://spaffnerds.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ]
+}
