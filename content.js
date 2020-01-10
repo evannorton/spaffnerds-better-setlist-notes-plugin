@@ -14,9 +14,6 @@ setInterval(() => {
                 const sup = sups[i + matched];
                 const note = noteCol.children[0].innerHTML;
                 if (notes.includes(note) === true) {
-                    console.log(noteCol);
-                    console.log(noteCol.parentElement);
-                    console.log("\n");
                     noteCol.parentElement.removeChild(noteCol);
                     sup.innerHTML = ` [ ${notes.indexOf(note) + 1} ]`;
                     matched++;
