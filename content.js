@@ -12,7 +12,11 @@ setInterval(() => {
             for (let i = 0; i < noteCols.length; i++) {
                 const noteCol = noteCols[i];
                 const sup = sups[i + matched];
-                const note = noteCol.children[0].innerHTML;
+                const notePieces = [];
+                for (let i = 0; i < noteCol.children.length; i++) {
+                    notePieces.push(noteCol.children[i].innerHTML);
+                }
+                const note = notePieces.join("");
                 if (notes.includes(note) === true) {
                     noteCol.parentElement.removeChild(noteCol);
                     sup.innerHTML = ` [ ${notes.indexOf(note) + 1} ]`;
